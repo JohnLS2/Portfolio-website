@@ -1,0 +1,120 @@
+/* ─── Footer ─── */
+.footer {
+  background: #07070b;
+  border-top: 1px solid var(--border-subtle);
+  padding: 6rem 0 3.6rem;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.8rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer__logo {
+  font-family: var(--font-sans);
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer__tagline {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  max-width: 34rem;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+}
+
+.footer__nav a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer__nav a:hover {
+  color: var(--accent-secondary);
+}
+
+.footer__back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 1rem 1.8rem;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.footer__back-to-top:hover {
+  background: rgba(108, 99, 255, 0.15);
+  border-color: var(--accent-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  font-size: 1.35rem;
+  color: var(--text-muted);
+}
+
+.footer__copy .font-bold {
+  font-weight: 700;
+}
+
+.footer__built {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+}
+
+.footer__heart {
+  color: #f59e0b;
+  margin: 0 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

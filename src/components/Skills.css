@@ -1,0 +1,266 @@
+/* ─── Skills ─── */
+.skills {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.skills__header {
+  margin-bottom: 4rem;
+}
+
+/* ─── Journey Ticker Card ─── */
+.skills__journey-card {
+  padding: 3.2rem 4rem;
+  margin-bottom: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.2rem;
+  border-left: 4px solid var(--accent-primary);
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.08) 0%, rgba(17, 17, 24, 0.8) 100%);
+}
+
+.skills__journey-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.15em;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-xl);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  margin-bottom: 1.2rem;
+}
+
+.skills__journey-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+.skills__journey-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.skills__journey-sub {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  max-width: 50rem;
+  line-height: 1.6;
+}
+
+.skills__journey-ticker {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 1.6rem 2.8rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.ticker-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ticker-val {
+  font-family: var(--font-mono);
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.ticker-lbl {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.4rem;
+}
+
+.ticker-colon {
+  font-family: var(--font-mono);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* ─── Filter Pills ─── */
+.skills__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3.6rem;
+}
+
+.skills__filter-btn {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.skills__filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.skills__filter-btn.active {
+  background: var(--accent-gradient);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 18px var(--accent-glow);
+}
+
+/* ─── Grid ─── */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+
+.skill-card {
+  padding: 2.4rem;
+  position: relative;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.skill-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.skill-card__icon {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-secondary);
+}
+
+.skill-card__meta {
+  flex-grow: 1;
+}
+
+.skill-card__name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.skill-card__category {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.skill-card__percent {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-secondary);
+}
+
+/* Progress track */
+.skill-card__track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 1.4rem;
+}
+
+.skill-card__fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 3px;
+  transition: width 1.2s var(--ease-out);
+}
+
+.skill-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.skill-card__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.skill-card__status {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills__journey-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills__journey-ticker {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__journey-ticker {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  .ticker-val {
+    font-size: 2.2rem;
+  }
+}
